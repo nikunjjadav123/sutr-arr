@@ -1,5 +1,5 @@
 {
-  "name": "sutr-arr",
+  "name": "@nikunjjadav1234/sutr-arr",
   "version": "1.0.0",
   "description": "sutr-arr is a lightweight JavaScript array utility library inspired by Indian Sutra philosophy — providing short, powerful formulas to solve complex array operations with clarity and speed.",
   "main": "src/index.js",

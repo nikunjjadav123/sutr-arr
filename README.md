@@ -23,7 +23,7 @@ It is designed as a clean alternative to lodash’s array utilities, with a stro
 ## 📦 Installation
 
 ```bash
-npm install sutr-arr
+npm install @nikunjjadav1234/sutr-arr
 
 ```bash
 import this library as below
