@@ -1,0 +1,23 @@
+# Development & tooling
+node_modules/
+__tests__/
+src/__tests__/
+coverage/
+
+# Config files
+babel.config.js
+jest.config.js
+.eslintrc*
+.prettierrc*
+
+# Git & editor
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Docs & notes
+Notes.txt
+
+# Lock file (optional)
+package-lock.json
