@@ -1,4 +1,4 @@
-import { SUT_ } from '../index.js'
+import { SUT_ } from '../src/index';
 
 describe('Array Utility Functions', () => {
 

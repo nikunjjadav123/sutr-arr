@@ -1,4 +1,4 @@
-import { SUT_ } from '../index.js'
+import { SUT_ } from '../src/index';
 
 test('adds days to a date', () => {
   const date = new Date('2025-01-01');
