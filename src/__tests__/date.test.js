@@ -55,18 +55,17 @@ test('Add days to given date', () => {
 test('Get range to given dates', () => {
   const result = SUT_.rangeDates('2026-01-12','2026-01-20');
   console.log(result);
-  expect(JSON.stringify(result))
-  .toBe(JSON.stringify([
-    "2026-01-11",
-    "2026-01-12",
-    "2026-01-13",
-    "2026-01-14",
-    "2026-01-15",
-    "2026-01-16",
-    "2026-01-17",
-    "2026-01-18",
-    "2026-01-19"
-  ]));
+  expect(result).toEqual([
+        '2026-01-12',
+        '2026-01-13',
+        '2026-01-14',
+        '2026-01-15',
+        '2026-01-16',
+        '2026-01-17',
+        '2026-01-18',
+        '2026-01-19'
+      ]);
+
 
 });
 

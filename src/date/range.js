@@ -10,12 +10,13 @@ import { normalizeDate } from './core.js';
  */
 export function rangeDates(start, end) {
   const result = [];
-  let current = normalizeDate(start);
-  const last = normalizeDate(end);
 
-  while (current <= last) {
-    result.push(current.toISOString().split('T')[0]);
-    current.setDate(current.getDate() + 1);
+  let current = new Date(start + "T00:00:00Z");
+  const last = new Date(end + "T00:00:00Z");
+
+  while (current < last) {
+    result.push(current.toISOString().slice(0, 10));
+    current.setUTCDate(current.getUTCDate() + 1);
   }
 
   return result;
