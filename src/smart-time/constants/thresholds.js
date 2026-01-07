@@ -1,0 +1,5 @@
+export const THRESHOLDS = {
+JUST_NOW_MINUTES:5,
+RECENT_HOURS: 6,
+WEEK_DAYS: 7
+};
