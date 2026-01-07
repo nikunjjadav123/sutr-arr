@@ -24,15 +24,18 @@ export function isAfter(a, b) {
  * Calculate age from date of birth
  */
 export function ageFrom(dob) {
-  const birth = normalizeDate(dob);
-  const today = normalizeDate(new Date());
+  const birth = new Date(dob);
+  const today = new Date();
 
-  let age = today.getFullYear() - birth.getFullYear();
-  if (
-    today.getMonth() < birth.getMonth() ||
-    (today.getMonth() === birth.getMonth() && today.getDate() < birth.getDate())
-  ) {
-    age--;
-  }
+  let age = today.getUTCFullYear() - birth.getUTCFullYear();
+
+  const hasBirthdayPassed =
+    today.getUTCMonth() > birth.getUTCMonth() ||
+    (today.getUTCMonth() === birth.getUTCMonth() &&
+     today.getUTCDate() >= birth.getUTCDate());
+
+  if (!hasBirthdayPassed) age--;
+
   return age;
 }
+

@@ -22,9 +22,12 @@ export function toDate(value) {
  * Useful for date-only comparison
  */
 export function normalizeDate(date) {
-  const d = toDate(date);
-  if (isNaN(d)) return null;
-  d.setHours(0, 0, 0, 0);
-  return d;
+  const d = new Date(date);
+
+  return new Date(Date.UTC(
+    d.getUTCFullYear(),
+    d.getUTCMonth(),
+    d.getUTCDate()
+  ));
 }
 

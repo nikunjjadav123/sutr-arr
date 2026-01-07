@@ -7,22 +7,26 @@ import { toDate } from './core.js';
 
 /** Return today's date */
 export function today() {
-  return toDate(new Date());
-} 
+  const d = new Date();
+  return new Date(Date.UTC(
+    d.getUTCFullYear(),
+    d.getUTCMonth(),
+    d.getUTCDate()
+  ));
+}
 
-/** Return tomorrow's date */
 export function tomorrow() {
-  const d = new Date();
-  d.setDate(d.getDate()+1);
+  const d = today();
+  d.setUTCDate(d.getUTCDate() + 1);
   return d;
 }
 
-/** Return yesterday's date */
 export function yesterday() {
-  const d = new Date();
-  d.setDate(d.getDate()-1);
+  const d = today();
+  d.setUTCDate(d.getUTCDate() - 1);
   return d;
 }
+
 
 /** Add days to a Date (considers weekends)*/
 export function addDays(date, days) {
