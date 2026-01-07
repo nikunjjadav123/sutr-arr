@@ -55,3 +55,12 @@ Locale-specific or free-text date strings are **not supported by design**, to pr
 npm install @nikunjjadav1234/sutr-arr
 
 import { SUT_ } from 'sutr-arr'
+
+### humanSmartDiff()
+
+```js
+SUT_.getDayPhase(2026-01-06T10:00)
+// → "morning"
+
+SUT_.getDayPhase("2026-01-05T19:30");
+// → "evening"
